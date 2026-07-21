@@ -1,0 +1,88 @@
+<!-- 
+5:4 aspect ratio
+-->
+<theme>
+	<!--
+	///
+	All Views
+	///
+	-->
+	<view name="system,gamelist">
+		<image name="system-controller">
+			<maxSize>0.0568888888888889 0.06</maxSize>
+		</image>	
+		
+		<systemstatus name="system-status">
+			<pos>0.89 0.0990740740740741</pos>
+		</systemstatus>
+	</view>
+	
+	<!--
+	///
+	System View
+	///
+	-->	
+	<view name="system">
+		<image name="system-menu-bar-background">
+			<maxSize>0.7 0.1125</maxSize>
+		</image>
+		<image name="system-menu-bar">
+			<maxSize>0.7 0.1125</maxSize>
+		</image>
+		<carousel name="system-carousel">
+			<itemSize>0.200520833333333 0.250651041666666</itemSize>
+		</carousel>
+		<animation name="system-selector">
+			<size>0.209409722222222 0.261762152777777</size>
+		</animation>
+
+		<image name="system-game-card">
+			<pos>0.070572917 0.26865594212963</pos>
+		</image>
+		<text name="systemName, autoCollectionName, customCollectionName">
+			<pos>0.113535875666667 0.26865594212963</pos>
+		</text>
+		
+		<image name="system-user-icon-background">
+			<size>0.063703704 0</size>
+		</image>
+		<image name="system-user-icon-background-color">
+			<size>0.063703704 0</size>
+		</image>
+		<image name="system-user-icon">
+			<maxSize>0.055555556 0.069444444</maxSize>
+		</image>
+	</view>
+	
+	<!--
+	///
+	Gamelist View
+	///
+	-->
+	<view name="gamelist">
+		<systemstatus name="system-status">
+			<pos>2 2</pos>
+		</systemstatus>
+		<text name="game-name">
+			<pos>0.142962958666667 0.138888889</pos>
+			<size>0.757037041333333 0.0333333333333333</size>
+		</text>
+	</view>
+	
+	<!--
+	///
+	Variant - No Home Menu Graphics
+	///
+	-->
+	<variant name="switch2-no-menu, switch1-no-menu">
+		<view name="system">
+			<image name="system-game-card">
+				<pos>0.070572917 0.312637442</pos> 
+			</image>
+			<text name="systemName, autoCollectionName, customCollectionName">
+				<pos>0.113535875666667 0.312637442</pos>
+			</text>
+		</view>
+	</variant>
+	
+</theme>

@@ -1,0 +1,113 @@
+<!-- 
+21:9 aspect ratio
+-->
+<theme>
+	<!--
+	///
+	All Views
+	///
+	-->
+	<view name="system,gamelist">
+		<image name="system-controller">
+			<maxSize>0.0304761904761905 0.06</maxSize>
+		</image>	
+		
+		<systemstatus name="system-status">
+			<pos>0.9175 0.0990740740740741</pos>
+		</systemstatus>
+	</view>
+	
+	<!--
+	///
+	System View
+	///
+	-->	
+	<view name="system">
+		<carousel name="system-carousel">
+			<itemSize>0.152777777777778 0.356481481481481</itemSize>
+			<maxItemCount>5.6</maxItemCount>
+			<horizontalOffset>-0.353703704</horizontalOffset>
+			<imageCornerRadius>0.011904762</imageCornerRadius>
+		</carousel>
+		<animation name="system-selector">
+			<pos>0.067526455 0.4560185</pos>
+			<size>0.157539682539682 0.367592592592592</size>
+		</animation>
+
+		<image name="system-game-card">
+			<pos>0.069907407 0.215740722</pos>
+		</image>
+		<text name="systemName, autoCollectionName, customCollectionName">
+			<pos>0.092923278 0.215740722</pos>
+		</text>
+		
+		<image name="system-user-icon-background">
+			<size>0.034126984 0</size>
+		</image>
+		<image name="system-user-icon-background-color">
+			<size>0.034126984 0</size>
+		</image>
+		<image name="system-user-icon">
+			<maxSize>0.029761905 0.069444444</maxSize>
+		</image>
+	</view>
+	
+	<!--
+	///
+	Gamelist View
+	///
+	-->
+	<view name="gamelist">
+		<systemstatus name="system-status">
+			<pos>2 2</pos>
+		</systemstatus>
+		<text name="game-name">
+			<pos>0.123015870714286 0.138888889</pos>
+			<size>0.776984129285714 0.0333333333333333</size>
+		</text>
+		<grid name="game-grid">
+			<imageCornerRadius>0.006</imageCornerRadius>
+			<textBackgroundCornerRadius>0.006</textBackgroundCornerRadius>
+		</grid>
+	</view>
+	
+	<!--
+	///
+	Variant - Switch 1
+	///
+	-->
+	<variant name="switch1, switch1-no-menu">
+		<view name="system">
+			<carousel name="system-carousel">
+				<imageCornerRadius>0</imageCornerRadius>
+			</carousel>
+		</view>
+		
+		<view name="gamelist"> 
+			<grid name="game-grid">
+				<imageCornerRadius>0</imageCornerRadius>
+				<textBackgroundCornerRadius>0</textBackgroundCornerRadius>
+			</grid>
+		</view>		
+	</variant>
+	
+	<!--
+	///
+	Variant - No Home Menu Graphics
+	///
+	-->
+	<variant name="switch2-no-menu, switch1-no-menu">
+		<view name="system">
+			<animation name="system-selector">
+				<pos>0.067526455 0.5</pos>
+			</animation>
+			<image name="system-game-card">
+				<pos>0.069907407 0.259722222</pos>
+			</image>
+			<text name="systemName, autoCollectionName, customCollectionName">
+				<pos>0.092923278 0.259722222</pos>
+			</text>
+		</view>
+	</variant>
+	
+</theme>

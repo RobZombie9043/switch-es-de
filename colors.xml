@@ -1,0 +1,37 @@
+<theme>
+<!--
+	///
+	Color Schemes
+	///
+	-->	
+	<colorScheme name="light">
+		<variables>
+			<systemBackground>EBEBEB</systemBackground> <!-- E9E9E9-->
+			<systemMenuBackground>F1F1F1</systemMenuBackground>
+			<infoText>000000</infoText>
+			<textSelected>215FE5</textSelected>
+			<textSelectedSwitch1>00C3E3</textSelectedSwitch1>
+			<colorTheme>light</colorTheme>
+		</variables>
+	</colorScheme>
+	<colorScheme name="dark">
+		<variables>
+			<systemBackground>2d2d2d</systemBackground>
+			<systemMenuBackground>525152</systemMenuBackground>
+			<infoText>ffffff</infoText>
+			<textSelected>1EC5DC</textSelected>
+			<textSelectedSwitch1>00A4C2</textSelectedSwitch1>
+			<colorTheme>dark</colorTheme>
+		</variables>
+	</colorScheme>
+	<colorScheme name="oled">
+		<variables>
+			<systemBackground>000000</systemBackground>
+			<systemMenuBackground>2d2d2d</systemMenuBackground>
+			<infoText>ffffff</infoText>
+			<textSelected>1EC5DC</textSelected>
+			<textSelectedSwitch1>00A4C2</textSelectedSwitch1>
+			<colorTheme>dark</colorTheme>
+		</variables>
+	</colorScheme>
+</theme>

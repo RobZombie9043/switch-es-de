@@ -1,0 +1,452 @@
+<!--
+theme name: 	Switch
+designed by:   	Rob Zombie
+license:      	creative commons CC-BY-NC-SA
+-->
+
+<theme>
+	
+	<include>./_inc/systems/metadata-global/_default.xml</include>
+	<include>./_inc/systems/metadata-global/${system.theme}.xml</include>
+	<include>./colors.xml</include>
+
+	<variables>
+		<spacerImage>./_inc/images/space.png</spacerImage>
+		<karla>./_inc/fonts/Karla-Medium.ttf</karla>
+		<instrumentSans>./_inc/fonts/InstrumentSans-Regular.ttf</instrumentSans>
+		<notoSansRegular>./_inc/fonts/NotoSansJP-Regular.ttf</notoSansRegular>
+		<notoSansMedium>./_inc/fonts/NotoSansJP-Medium.ttf</notoSansMedium>
+	</variables>
+	
+	<!--
+	///
+	All Views
+	///
+	-->
+	<view name="system,gamelist">
+		<image name="system-background">
+			<origin>0 0</origin>
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<path>${spacerImage}</path>
+			<color>${systemBackground}</color>
+			<tile>true</tile>
+			<zIndex>1</zIndex>
+		</image>
+		<image name="system-controller">
+			<origin>0.5 0.5</origin>
+			<pos>0.0640625 0.94907407</pos>
+			<maxSize>0.04 0.06</maxSize> <!-- custom size per aspect ratio -->
+			<default>./_inc/systems/controllers/_default.png</default>
+			<path>./_inc/systems/controllers/${system.theme}.png</path>
+			<color>${infoText}</color>
+			<mipmap>true</mipmap>
+			<stationary>withinView</stationary>
+			<zIndex>2</zIndex>
+		</image>	
+		
+		<systemstatus name="system-status">
+			<origin>1 0.5</origin>
+			<pos>0.9075 0.0990740740740741</pos> <!-- custom x pos per aspect ratio -->
+			<fontPath>${notoSansMedium}</fontPath>
+			<height>0.0296296296296296</height>
+			<color>${infoText}</color>
+			<textRelativeScale>1</textRelativeScale>
+			<entrySpacing>0.015</entrySpacing>
+			<customIcon icon="icon_wifi">./_inc/images/wifi.svg</customIcon>
+			<customIcon icon="icon_bluetooth">./_inc/images/bluetooth.svg</customIcon>
+			<customIcon icon="icon_cellular">./_inc/images/cellular.svg</customIcon>
+			<customIcon icon="icon_battery_low">./_inc/images/battery_low.svg</customIcon>
+			<customIcon icon="icon_battery_medium">./_inc/images/battery_medium.svg</customIcon>
+			<customIcon icon="icon_battery_high">./_inc/images/battery_high.svg</customIcon>
+			<customIcon icon="icon_battery_full">./_inc/images/battery_full.svg</customIcon>
+			<customIcon icon="icon_battery_charging">./_inc/images/battery_charging.svg</customIcon>
+		</systemstatus>
+		<clock name="clock">
+			<origin>1 0.5</origin>
+			<pos>0.95833333333 0.0990740740740741</pos>
+			<fontPath>${notoSansMedium}</fontPath>
+			<fontSize>0.0296296296296296</fontSize>
+			<color>${infoText}</color>
+		</clock>
+		<helpsystem name="help">
+			<origin>1 0.5</origin>
+			<pos>0.95833333333 0.94907407</pos>
+			<fontSize>0.0277777777777778</fontSize>
+			<fontPath>${notoSansMedium}</fontPath>
+			<letterCase>capitalize</letterCase>
+			<iconColor>${infoText}</iconColor>
+			<textColor>${infoText}</textColor>
+			<originDimmed>0.5 0</originDimmed>
+			<posDimmed>0.5 0.94</posDimmed>
+			<fontSizeDimmed>0.0277777777777778</fontSizeDimmed>
+			<textColorDimmed>${infoText}</textColorDimmed>
+			<iconColorDimmed>${infoText}</iconColorDimmed>
+			<opacityDimmed>0.8</opacityDimmed>
+			<entries>start,b,a</entries>
+			<entrySpacing>0.015</entrySpacing>
+		</helpsystem>
+		
+	</view>
+	<view name="system">
+		<image name="system-background">
+			<stationary>always</stationary>
+		</image>
+	</view>
+	<view name="gamelist">
+		<image name="system-background">
+			<renderDuringTransitions>false</renderDuringTransitions>
+		</image>
+	</view>
+
+	<!--
+	///
+	System View - Common
+	///
+	-->
+	<view name="system">
+		<image name="system-menu-bar-background">
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.77222222</pos>
+			<maxSize>0.6552083333333333 0.1125</maxSize>
+			<path>./_inc/images/menu_bar.png</path>
+			<color>${systemMenuBackground}</color>
+			<zIndex>2</zIndex>
+		</image>
+		<image name="system-menu-bar">
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.77222222</pos>
+			<maxSize>0.6552083333333333 0.1125</maxSize>
+			<path>./_inc/images/menu.png</path>
+			<zIndex>3</zIndex>
+		</image>
+		<carousel name="system-carousel">
+			<origin>0 0.5</origin>
+			<pos>0 0.4560185</pos>
+			<size>1 0.3564814814814815</size>
+			<itemSize>0.2005208333333333 0.3564814814814815</itemSize>
+			<itemScale>1.0</itemScale>
+			<staticImage>./_inc/systems/carousel-icons/${system.theme}.webp</staticImage>
+			<imageColor>ffffff</imageColor>
+			<type>horizontal</type>
+			<maxItemCount>4.6</maxItemCount>
+			<imageCornerRadius>0.0135416666666667</imageCornerRadius>
+			<horizontalOffset>-0.3240625</horizontalOffset>
+			<fastScrolling>true</fastScrolling>
+			<color>00000000</color>
+			<unfocusedItemOpacity>0.9</unfocusedItemOpacity>
+			<unfocusedItemDimming>1</unfocusedItemDimming>
+			<textColor>${infoText}</textColor>
+			<zIndex>10</zIndex>
+		</carousel>
+		
+		<animation name="system-selector">
+			<origin>0 0.5</origin>
+			<pos>0.071572917 0.4560185</pos>
+			<size>0.206770833333333 0.367592592592592</size>		
+			<path>./_inc/images/selectors/switch2_${colorTheme}.json</path>
+			<cornerRadius>0</cornerRadius>
+			<zIndex>30</zIndex>
+		</animation>
+		
+		<image name="system-game-card">
+			<origin>0 0</origin>
+			<pos>0.070572917 0.2157407407407407</pos> 
+			<size>0 0.0333333333333333</size> 
+			<path>./_inc/images/game_card.svg</path>
+			<color>${textSelected}</color>
+			<zIndex>3</zIndex>
+		</image>
+		<text name="systemName, autoCollectionName, customCollectionName">
+			<origin>0 0</origin>
+			<pos>0.093177083 0.2157407407407407</pos>
+			<size>0.804660933 0.0333333333333333</size>
+			<fontPath>${notoSansRegular}</fontPath>
+			<fontSize>0.0333333333333333</fontSize>
+			<color>${textSelected}</color>
+			<horizontalAlignment>left</horizontalAlignment>
+			<container>true</container>
+			<containerType>horizontal</containerType>
+		</text>
+		<text name="systemName">
+            <text>${system.fullName.noCollections}</text>
+            <letterCase>none</letterCase>
+        </text>
+        <text name="autoCollectionName">
+            <text>${system.fullName.autoCollections}</text>
+            <letterCase>capitalize</letterCase>
+        </text>
+        <text name="customCollectionName">
+            <text>${system.fullName.customCollections}</text>
+            <letterCase>none</letterCase>
+        </text>
+		
+		<image name="system-user-icon-background">
+			<origin>0.5 0.5</origin>
+			<pos>0.0640625 0.0990740740740741</pos>
+			<size>0.0447916666666667 0</size>
+			<path>./_inc/images/circle_outline.svg</path>
+			<color>${systemMenuBackground}</color>
+			<zIndex>5</zIndex>
+		</image>
+		<image name="system-user-icon-background-color">
+			<origin>0.5 0.5</origin>
+			<pos>0.0640625 0.0990740740740741</pos>
+			<size>0.0385416666666667 0</size>
+			<path>./_inc/images/circle.svg</path>
+			<color>999999</color>
+			<zIndex>3</zIndex>
+		</image>
+		<image name="system-user-icon">
+			<origin>0.5 0.5</origin>
+			<pos>0.0640625 0.0990740740740741</pos>
+			<maxSize>0.0385416666666667 0.0685185185185185</maxSize>
+			<path>./_inc/images/avatar-default.png</path>
+			<mipmap>true</mipmap>
+			<cornerRadius>0.5</cornerRadius>
+			<zIndex>4</zIndex>
+		</image>
+	
+	</view>
+
+	<!--
+	///
+	Gamelist View
+	///
+	-->
+	<include>./_inc/systems/coversize-grid/${systemCoverSize}.xml</include>
+	
+	<view name="gamelist"> 
+		<grid name="game-grid">
+			<origin>0.5 1</origin>
+			<pos>0.5 0.898148148</pos>
+			<size>0.8 0.72222222</size>
+			<imageType>cover</imageType>
+			<itemSize>${gridItemSize}</itemSize>
+			<itemScale>1.0</itemScale>
+			<itemSpacing>${gridItemSpacing}</itemSpacing>
+			<fractionalRows>true</fractionalRows>
+			<imageFit>contain</imageFit>
+			<imageCornerRadius>0.0078125</imageCornerRadius>
+			<selectorImage>./_inc/images/selectors/switch2_${colorTheme}/${systemCoverSize}.png</selectorImage>
+			<imageRelativeScale>0.94</imageRelativeScale>
+			<textColor>${infoText}</textColor>
+			<fontPath>${notoSansRegular}</fontPath>
+			<fontSize>0.025</fontSize>
+			<textBackgroundColor>${systemMenuBackground}</textBackgroundColor>
+			<textBackgroundCornerRadius>0.0078125</textBackgroundCornerRadius>
+			<textRelativeScale>0.94</textRelativeScale>
+			<zIndex>10</zIndex>
+		</grid>
+			
+		<image name="system-name">
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.050925925</pos>
+			<maxSize>0.15 0.05</maxSize>
+			<color>${infoText}</color>
+			<path>./_inc/systems/logos/${system.theme}.svg</path>
+			<stationary>withinView</stationary>
+			<zIndex>2</zIndex>
+		</image>
+		
+		
+		<image name="game-game-card">
+			<origin>0 0.5</origin>
+			<pos>0.1035 0.138888889</pos>
+			<size>0 0.0333333333333333</size>
+			<path>./_inc/images/game_card.svg</path>
+			<color>${textSelected}</color>
+			<zIndex>3</zIndex>
+		</image>
+		<text name="game-name">
+			<origin>0 0.5</origin>
+			<pos>0.125 0.138888889</pos>
+			<size>0.5 0.0333333333333333</size>
+			<metadata>name</metadata>
+			<fontPath>${notoSansRegular}</fontPath>
+			<fontSize>0.0333333333333333</fontSize>
+			<color>${textSelected}</color>
+			<horizontalAlignment>left</horizontalAlignment>
+			<container>true</container>
+			<containerType>horizontal</containerType>
+		</text>
+		
+		<image name="game-header-line,game-footer-line">
+			<origin>0.5 0</origin>
+			<size>0.925 0.000925</size>
+			<path>${spacerImage}</path>
+			<color>${infoText}80</color>
+			<tile>true</tile>
+			<zIndex>3</zIndex>
+		</image>
+		<image name="game-header-line">
+			<pos>0.5 0.10185185</pos>
+		</image>
+		<image name="game-footer-line">
+			<pos>0.5 0.898148148</pos>
+		</image>
+	
+		<systemstatus name="system-status">
+			<pos>2 2</pos>
+		</systemstatus>
+		<clock name="clock">
+			<pos>2 2</pos>
+		</clock>
+		
+		<helpsystem name="l-button, r-button">
+			<fontSize>0.045</fontSize>
+			<iconColor>${infoText}</iconColor>
+			<textColor>${infoText}00</textColor>
+			<opacityDimmed>0</opacityDimmed>
+			<entries>lr,ltrt</entries>
+		</helpsystem>
+		<helpsystem name="l-button">
+			<origin>1 0.5</origin>
+			<pos>0.35 0.050925925</pos>
+			<entryLayout>textFirst</entryLayout>
+			<customButtonIcon button="button_lr">./_inc/images/button_l1_outline.svg</customButtonIcon>
+			<customButtonIcon button="button_ltrt">./_inc/images/button_l2_outline.svg</customButtonIcon>
+		</helpsystem>
+		<helpsystem name="r-button">
+			<origin>0 0.5</origin>
+			<pos>0.65 0.050925925</pos>
+			<customButtonIcon button="button_lr">./_inc/images/button_r1_outline.svg</customButtonIcon>
+			<customButtonIcon button="button_ltrt">./_inc/images/button_r2_outline.svg</customButtonIcon>
+		</helpsystem>
+	
+	</view>
+	
+	
+	<!--
+	///
+	Variant - Switch 1
+	///
+	-->
+	<variant name="switch1, switch1-no-menu">
+		<view name="system">
+			<image name="system-menu-bar-background">
+				<visible>false</visible>
+			</image>
+			<image name="system-menu-bar">
+				<path>./_inc/images/menu_switch1.png</path>
+			</image>
+			<carousel name="system-carousel">
+				<imageCornerRadius>0</imageCornerRadius>
+			</carousel>
+			<animation name="system-selector">
+				<origin>0 0.5</origin>
+				<path>./_inc/images/selectors/switch1_${colorTheme}.json</path>
+			</animation>
+			<image name="system-game-card">
+				<color>${textSelectedSwitch1}</color>
+			</image>
+			<text name="systemName, autoCollectionName, customCollectionName">
+				<color>${textSelectedSwitch1}</color>
+			</text>
+		</view>
+		
+		<view name="gamelist"> 
+			<grid name="game-grid">
+				<selectorImage>./_inc/images/selectors/switch1_${colorTheme}/${systemCoverSize}.png</selectorImage>	
+				<imageCornerRadius>0</imageCornerRadius>
+				<textBackgroundCornerRadius>0</textBackgroundCornerRadius>
+			</grid>
+			<image name="game-game-card">
+				<color>${textSelectedSwitch1}</color>
+			</image>
+			<text name="game-name">
+				<color>${textSelectedSwitch1}</color>
+			</text>
+		</view>
+		
+	</variant>
+	
+	<!--
+	///
+	Variant - No Home Menu Graphics
+	///
+	-->
+	<variant name="switch2-no-menu, switch1-no-menu">
+		<view name="system">
+			<image name="system-menu-bar-background">
+				<visible>false</visible>
+			</image>
+			<image name="system-menu-bar">
+				<visible>false</visible>
+			</image>
+			<carousel name="system-carousel">
+				<pos>0 0.5</pos>
+			</carousel>
+			<animation name="system-selector">
+				<pos>0.071572917 0.5</pos>
+			</animation>
+		</view>
+	</variant>
+	
+	
+	<!--
+	///
+	Aspect Ratios
+	///
+	-->
+	<aspectRatio name="1:1">
+		<include>./aspect-ratio-1-1.xml</include>
+	</aspectRatio>
+	<aspectRatio name="8:7">
+		<include>./aspect-ratio-8-7.xml</include>
+	</aspectRatio>	
+	<aspectRatio name="5:4">
+		<include>./aspect-ratio-5-4.xml</include>
+	</aspectRatio>
+	<aspectRatio name="4:3">
+		<include>./aspect-ratio-4-3.xml</include>
+	</aspectRatio>
+	<aspectRatio name="3:2">
+		<include>./aspect-ratio-3-2.xml</include>
+	</aspectRatio>
+	<aspectRatio name="16:10">
+		<include>./aspect-ratio-16-10.xml</include>
+	</aspectRatio>
+	<aspectRatio name="16:9">
+		<include>./aspect-ratio-16-9.xml</include>
+	</aspectRatio>
+	<aspectRatio name="19.5:9">
+		<include>./aspect-ratio-19-5-9.xml</include>
+	</aspectRatio>
+	<aspectRatio name="21:9">
+		<include>./aspect-ratio-21-9.xml</include>
+	</aspectRatio>
+	<aspectRatio name="32:9">
+		<include>./aspect-ratio-32-9.xml</include>
+	</aspectRatio>	
+	
+	<!--
+	///
+	Sounds
+	///
+	-->
+	<view name="all">
+		<sound name="systembrowse">
+			<path>./_inc/sounds/systembrowse.wav</path>
+		</sound>
+		<sound name="quicksysselect">
+			<path>./_inc/sounds/quicksysselect.wav</path>
+		</sound>
+		<sound name="select">
+			<path>./_inc/sounds/select.wav</path>
+		</sound>
+		<sound name="back">
+			<path>./_inc/sounds/back.wav</path>
+		</sound>
+		<sound name="scroll">
+			<path>./_inc/sounds/scroll.wav</path>
+		</sound>
+		<sound name="favorite">
+			<path>./_inc/sounds/favorite.wav</path>
+		</sound>
+		<sound name="launch">
+			<path>./_inc/sounds/launch.wav</path>
+		</sound>
+	</view>
+	
+</theme>

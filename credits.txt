@@ -1,0 +1,18 @@
+Carousel Icons - lilbud - https://github.com/lilbud/es-theme-switch
+
+Theme Sounds - MrVictorFull (shared on ES-DE discord)
+
+Switch 2 UI Design elements - Artem Rudoi -
+https://www.figma.com/community/file/1499364784125208935/nintendo-switch-2-ui-design
+
+Switch UI Design elements - Nghi Quach
+https://www.figma.com/community/file/969438412864545039/nintendo-switch-screens
+
+Battery status symbols - Ethan Vazquez
+https://www.figma.com/community/file/1524634009185336099/switch-2-ui-overhaul
+
+Button symbols - 
+https://kenney.nl/assets/input-prompts
+
+Fonts - 
+Noto Sans JP - https://fonts.google.com/noto/specimen/Noto+Sans+JP

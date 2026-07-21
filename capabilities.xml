@@ -1,0 +1,98 @@
+<themeCapabilities>
+   
+	<themeName>Switch</themeName>
+	
+	<!--
+	///
+	Variants
+	///
+	-->
+	<variant name="switch2">
+		<label>Switch 2</label>
+		<selectable>true</selectable>
+	</variant>
+	<variant name="switch2-no-menu">
+		<label>Switch 2 (no home menu)</label>
+		<selectable>true</selectable>
+	</variant>	
+	<variant name="switch1">
+		<label>Switch 1</label>
+		<selectable>true</selectable>
+	</variant>
+	<variant name="switch1-no-menu">
+		<label>Switch 1 (no home menu)</label>
+		<selectable>true</selectable>
+	</variant>	
+	
+	<!--
+	///
+	Aspect Ratios
+	///
+	-->
+	<aspectRatio>1:1</aspectRatio>
+	<aspectRatio>8:7</aspectRatio>
+	<aspectRatio>5:4</aspectRatio>
+	<aspectRatio>4:3</aspectRatio>
+	<aspectRatio>3:2</aspectRatio>
+	<aspectRatio>16:10</aspectRatio>
+	<aspectRatio>16:9</aspectRatio>
+	<aspectRatio>19.5:9</aspectRatio>
+	<aspectRatio>21:9</aspectRatio>
+	<aspectRatio>32:9</aspectRatio>
+	
+	<!--
+	///
+	Color Schemes
+	///
+	-->
+	<colorScheme name="light">
+		<label>Basic White</label>
+	</colorScheme>
+	<colorScheme name="dark">
+		<label>Basic Black</label>
+	</colorScheme>
+	<colorScheme name="oled">
+		<label>OLED</label>
+	</colorScheme>
+	
+	<!--
+	///
+	Font Size
+	///
+	-->
+	<fontSize>small</fontSize>
+	<fontSize>medium</fontSize>
+	<fontSize>large</fontSize>
+	
+	<!--
+	///
+	Transitions
+	///
+	-->
+	<transitions name="slide">
+		<label>slide</label>
+		<selectable>true</selectable>
+		<systemToSystem>instant</systemToSystem>
+		<systemToGamelist>instant</systemToGamelist>
+		<gamelistToGamelist>slide</gamelistToGamelist>
+		<gamelistToSystem>instant</gamelistToSystem>
+		<startupToSystem>fade</startupToSystem>
+		<startupToGamelist>fade</startupToGamelist>
+	</transitions>
+	<transitions name="instant">
+		<label>instant</label>
+		<selectable>true</selectable>
+		<systemToSystem>instant</systemToSystem>
+		<systemToGamelist>instant</systemToGamelist>
+		<gamelistToGamelist>instant</gamelistToGamelist>
+		<gamelistToSystem>instant</gamelistToSystem>
+		<startupToSystem>fade</startupToSystem>
+		<startupToGamelist>fade</startupToGamelist>
+	</transitions>
+	<suppressTransitionProfiles>
+		<entry>builtin-instant</entry>
+		<entry>builtin-slide</entry>
+		<entry>builtin-fade</entry>
+	</suppressTransitionProfiles>
+	
+</themeCapabilities>
