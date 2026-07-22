@@ -104,6 +104,9 @@
 			<text name="systemName, autoCollectionName, customCollectionName">
 				<pos>0.106375382555556 0.287572338</pos>
 			</text>
+			<animation name="system-selector">
+				<pos>0.0697210651481481 0.5</pos>
+			</animation>
 		</view>
 	</variant>
 	

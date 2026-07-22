@@ -98,15 +98,15 @@
 	-->
 	<variant name="switch2-no-menu, switch1-no-menu">
 		<view name="system">
-			<animation name="system-selector">
-				<pos>0.058268229 0.5</pos>
-			</animation>
 			<image name="system-game-card">
 				<pos>0.059830729 0.259722222</pos> 
 			</image>
 			<text name="systemName, autoCollectionName, customCollectionName">
 				<pos>0.074934894 0.259722222</pos>
 			</text>
+			<animation name="system-selector">
+				<pos>0.056705729 0.5</pos>
+			</animation>
 		</view>
 	</variant>
 	
