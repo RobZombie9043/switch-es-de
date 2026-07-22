@@ -4,9 +4,9 @@
 	Color Schemes
 	///
 	-->	
-	<colorScheme name="light">
+	<colorScheme name="light, custom">
 		<variables>
-			<systemBackground>EBEBEB</systemBackground> <!-- E9E9E9-->
+			<systemBackground>EBEBEB</systemBackground>
 			<systemMenuBackground>F1F1F1</systemMenuBackground>
 			<infoText>000000</infoText>
 			<textSelected>215FE5</textSelected>
@@ -34,4 +34,11 @@
 			<colorTheme>dark</colorTheme>
 		</variables>
 	</colorScheme>
+	
+	<colorScheme name="custom">
+		<variables>
+			<customizationsPath>./theme-customizations/customizations.xml</customizationsPath>
+		</variables>
+	</colorScheme>
+	<include>${customizationsPath}</include>
 </theme>

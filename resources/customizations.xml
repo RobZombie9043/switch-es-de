@@ -1,0 +1,11 @@
+<theme>
+	<variables>
+		<systemBackground>EBEBEB</systemBackground>				<!-- background color -->
+		<systemMenuBackground>F1F1F1</systemMenuBackground>		<!-- background color of home menu bar if variant selected -->
+		<infoText>000000</infoText>								<!-- general text color -->
+		<textSelected>215FE5</textSelected>						<!-- accented text color (e.g. system name, game name) -->
+		<textSelectedSwitch1>00C3E3</textSelectedSwitch1>		<!-- accented text color for switch 1 variants (e.g. system name, game name) -->
+		<colorTheme>light</colorTheme>							<!-- which selectors to use, light or dark -->
+		<!-- add custom background -->
+	</variables>
+</theme>

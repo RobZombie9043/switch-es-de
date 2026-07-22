@@ -54,6 +54,10 @@
 	<colorScheme name="oled">
 		<label>OLED</label>
 	</colorScheme>
+	<colorScheme name="custom">
+		<label>custom</label>
+	</colorScheme>
+	
 	
 	<!--
 	///
