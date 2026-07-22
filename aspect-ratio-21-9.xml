@@ -27,11 +27,11 @@
 			<itemSize>0.152777777777778 0.356481481481481</itemSize>
 			<maxItemCount>5.6</maxItemCount>
 			<horizontalOffset>-0.353703704</horizontalOffset>
-			<imageCornerRadius>0.011904762</imageCornerRadius>
+			<imageCornerRadius>0.00892857142857143</imageCornerRadius>
 		</carousel>
 		<animation name="system-selector">
-			<pos>0.067526455 0.4560185</pos>
-			<size>0.157539682539682 0.367592592592592</size>
+			<pos>0.0651455026190476 0.4560185</pos>
+			<size>0.163492063492063 0.381481481481481</size>
 		</animation>
 
 		<image name="system-game-card">

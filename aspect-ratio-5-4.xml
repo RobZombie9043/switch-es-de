@@ -31,9 +31,11 @@
 		</image>
 		<carousel name="system-carousel">
 			<itemSize>0.200520833333333 0.250651041666666</itemSize>
+			<imageCornerRadius>0.00888888888888889</imageCornerRadius>
 		</carousel>
 		<animation name="system-selector">
-			<size>0.209409722222222 0.261762152777777</size>
+			<pos>0.0693506947777778 0.4560185</pos>
+			<size>0.216076388888889 0.27009548611111</size>
 		</animation>
 
 		<image name="system-game-card">
@@ -68,6 +70,26 @@
 			<size>0.757037041333333 0.0333333333333333</size>
 		</text>
 	</view>
+	
+	<!--
+	///
+	Variant - Switch 1
+	///
+	-->
+	<variant name="switch1, switch1-no-menu">
+		<view name="system">
+			<carousel name="system-carousel">
+				<imageCornerRadius>0</imageCornerRadius>
+			</carousel>
+		</view>
+		
+		<view name="gamelist"> 
+			<grid name="game-grid">
+				<imageCornerRadius>0</imageCornerRadius>
+				<textBackgroundCornerRadius>0</textBackgroundCornerRadius>
+			</grid>
+		</view>		
+	</variant>
 	
 	<!--
 	///
